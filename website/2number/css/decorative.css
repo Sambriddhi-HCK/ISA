@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+/* Set the box-sizing for all elements to border-box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Aboreto', cursive;
+  background-color: #eaebdc;
+  font-size: 1.5vw;
+  
+}
+
+
+h1 {
+  display: inline;
+}
+
+h2 {
+  padding-bottom: 3%;
+  font-size: 1.3rem;
+
+}
+
+img {
+  width: fit-content;
+  height: auto;
+  float: right;
+}
+
+p a {
+  color: #cd5c2f;
+}
+
+li{
+  list-style: none;
+}
+
+.topnav {
+  background-color: #f1dbc9;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.navmenu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  transition: 0.5s ease;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #cd5c2f;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #cd5c2f;
+  color: #edf7f9;
+}
+
+/* Add alignment to the right split nav */
+
+.container {
+  display: block;
+  letter-spacing: 2px;
+}
+
+.text {
+  padding-top: 170px;
+  padding-left: 150px;
+}
+
+#contacts {
+  padding: 3%;
+  font-size: 3rem;
+}
+
+h2 span {
+  color: #cd5c2f;
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #cd5c2f;
+}
+
+#footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: black;
+    color: #edf7f9;
+  }
+
+  .text {
+    padding: 100px 70px;
+  }
+
+
+  img {
+    height: auto;
+    width: 350px;
+    padding: 60px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .topnav {
+    background-color: black ;
+  }
+
+  .topnav a{
+    color: #edf7f9;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .navmenu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: black;
+    width: 100%;
+  }
+
+  .nav-item{
+    padding:  16px;
+  }
+
+  .navmenu.active{
+    left: 0;
+  }
+
+  img {
+    height: auto;
+    width: 250px;
+    float: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    padding-top: 10px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 425px) {
+  img {
+    width: 100vw;
+    height: auto;
+    float: none;
+  }
+
+  .container h1 {
+    font-size: 30px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  .container p {
+    font-size: 60%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    padding: 100px 70px;
+  }
+
+  h2 {
+    padding-top: 10px;
+  }
+}

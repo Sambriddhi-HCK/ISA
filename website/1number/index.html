@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Aboreto', cursive;
+            background-color: #eaebdc;
+            font-size: 1.5vw;
+            letter-spacing: 2px;
+            padding: 2%;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom : 2%;
+            color: rgb(30, 117, 56);
+        }
+
+        .container {
+            background-color: white;
+            margin: 0 35%;
+            display: flex;
+            padding: 2% ;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-contents {
+            padding: 2% 0;
+        }
+
+        .form-contentss {
+            padding: 2% 0;
+        }
+
+        .form-contents inout {
+            width: 100%;
+        }
+        label{
+            color: rgb(86, 15, 15);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <main class="main-container">
+        <h1>Herald college Kathmandu Survey Form</h1>
+        <div class="container">
+            <form>
+                <div class="form-contents">
+                    <label for="fname">Name:</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your name"><br>
+                </div>
+                <div class="form-contents">
+
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="Enter your email"><br>
+                </div>
+                <div class="form-contents">
+
+                    <label for="age">Age:</label><br>
+                    <input type="text" id="age" name="lname" placeholder="Enter your age"><br>
+                </div>
+                <div class="form-contents">
+
+                    <label for="identity">Which option best describes you?</label><br>
+
+                    <select name="Suits" id="">
+                        <option value="Student">Student</option>
+                        <option value="Lecturer">Lecturer</option>
+                        <option value="Staff">Staff</option>
+                    </select> <br>
+                </div>
+                <div class="form-contentss">
+                    <div class="contents">
+
+                        <label for="recommending">Would you recommend Herald to a friend?</label><br>
+                        <input type="radio" id="friend" name="option">Yes<br>
+                        <input type="radio" id="friend" name="option">No<br>
+                        <input type="radio" id="friend" name="option">May be<br>
+                    </div>
+                </div>
+                <div class="form-contentss">
+                    <label for="choosing">Languages and Frameworks known</label><br>
+                    <input type="checkbox">C<br>
+                    <input type="checkbox">C++<br>
+                    <input type="checkbox">C#<br>
+                    <input type="checkbox">Java<br>
+                    <input type="checkbox">Python<br>
+                    <input type="checkbox">JavaScript<br>
+                    <input type="checkbox">React<br>
+                    <input type="checkbox">Angular<br>
+                    <input type="checkbox">Django<br>
+                    <input type="checkbox">Script<br>
+                </div>
+                <div class="form-contents">
+                    <label for="comment">Any comments or suggestions:</label><br>
+                    <textarea name="" id="comment" placeholder="Message"></textarea>
+                </div>
+                <input style="width: 100%;" type="submit">
+            </form>
+
+        </div>
+    </main>
+    
+</body>
+
+</html>
