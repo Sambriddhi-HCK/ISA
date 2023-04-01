@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Aboreto', cursive;
+    background-color: #CCD7E4;
+    color: #38405F;
+    font-size: 1.5vw;
+  }
+
+  .top-nav {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 1.5;
+    min-height: 50px;
+    background-color: #2F195F;
+}
+.top-nav .nav-items{
+    color: #f4f1bb;
+    margin: 1% 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top-nav .nav-item{
+    padding: 0 24px;
+}
+#submit{
+    cursor: pointer;
+}
+.top-nav form{
+    display: flex;
+    align-items: center;
+}
+.top-nav form input {
+    background-color: #2F195F;
+}
+::placeholder{
+    color: #EDD2B4;
+}
+input[type="text"] {
+    color: #EDD2B4;
+}
+
+.menu{
+    margin-left: 24pt;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.1vw;
+}
+#container{
+    padding: 2%;
+}
+
