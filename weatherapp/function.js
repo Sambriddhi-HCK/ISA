@@ -2,9 +2,7 @@
 const city = document.querySelector("#city-search-box");
 const city_search = document.querySelector("#city-search-box");
 const submit = document.querySelector("#submit");
-
-
-const weather_overview = document.querySelector(".weather-overview");
+const weather_description = document.querySelector(".weather_description");
 const weather_icon = document.querySelector(".weather-icon");
 const city_name = document.querySelector(".city_name");
 const max_temp = document.querySelector(".maximum-temperature");
@@ -13,6 +11,7 @@ const humidity =  document.querySelector(".humidity");
 const wind =  document.querySelector(".windspeed");
 const pressure =  document.querySelector(".pressure");
 const dateAndtime = document.querySelector("#date_time");
+
 
 const errorMessage = document.getElementById('error-message');
 
@@ -34,6 +33,8 @@ async function fetchWeatherData(cityname) {
     //Setting a random image of the city entered
     document.body.style.backgroundImage = `URL("https://source.unsplash.com/1600x900/?${data.name}")`
 
+        weather_description.innerHTML = `Weather Today : ${data.weather.description}`;
+
         city_name.innerHTML = data.name;
     
         max_temp.innerHTML = `Maximum Temperature: ${data.main.temp_max} °C`;
@@ -46,15 +47,14 @@ async function fetchWeatherData(cityname) {
 
         pressure.innerHTML = `Pressure : ${data.main.pressure} Pascal`;
 
+
         
     } catch (error) {
         console.error(error);
         errorMessage.innerHTML = 'Sorry.. City Not Found!!'
         
       }
-    
 }
-
 fetchWeatherData("Arlington");
 
 // function updateTime() {
