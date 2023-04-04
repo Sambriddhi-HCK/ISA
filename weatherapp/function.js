@@ -10,7 +10,7 @@ const min_temp = document.querySelector(".minimum-temperature");
 const humidity =  document.querySelector(".humidity");
 const wind =  document.querySelector(".windspeed");
 const pressure =  document.querySelector(".pressure");
-const dateAndtime = document.querySelector("#date_time");
+const datebox = document.querySelector("#datebox");
 
 
 const errorMessage = document.getElementById('error-message');
@@ -33,7 +33,7 @@ async function fetchWeatherData(cityname) {
     //Setting a random image of the city entered
     document.body.style.backgroundImage = `URL("https://source.unsplash.com/1600x900/?${data.name}")`
 
-        weather_description.innerHTML = `Weather Today : ${data.weather.description}`;
+        weather_description.innerHTML = `Weather Today : ${data.weather[0].description}`;
 
         city_name.innerHTML = data.name;
     
@@ -57,20 +57,16 @@ async function fetchWeatherData(cityname) {
 }
 fetchWeatherData("Arlington");
 
-// function updateTime() {
-//     let date = new Date();
-//     let year = date.getFullYear();
-//     let month = date.getMonth() + 1; // as month returns a number between 0 and 11 , adding one to get 1 in January 
-//     let day = date.getDate();
-//     let hours = date.getHours();
-//     let minutes = date.getMinutes();
-//     let seconds = date.getSeconds();
-//     let date_timeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-//     dateAndtime.innerHTML = date_timeString;
-//     console.log(date_timeString);
-//   }
+function updateDate() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1; // as month returns a number between 0 and 11 , adding one to get 1 in January 
+    let day = date.getDate();
+    datebox.innerHTML = `${year}-${month}-${day}`;
+    console.log(date_String);
+  }
   
-// setInterval(updateTime, 1000);
+setInterval(updateDate, 1000);
 
 city_search.addEventListener('keydown', (eventinsearchbox) => {
     if (eventinsearchbox.keyCode === 13) {
