@@ -40,7 +40,7 @@ async function fetchWeatherData(cityname) {
     
         max_temp.innerHTML = `Maximum Temperature: ${data.main.temp_max} °C`;
     
-        min_temp.innerHTML = `${data.main.temp_min} `;
+        min_temp.innerHTML = `Minimum Temperature: ${data.main.temp_min} `;
     
         humidity.innerHTML = `Humidity : ${data.main.humidity}%`;
         
